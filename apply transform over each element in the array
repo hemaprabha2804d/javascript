@@ -1,0 +1,19 @@
+function map(arr, fn) {
+    let result = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        result.push(fn(arr[i], i));
+    }
+
+    return result;
+}
+
+function plusI(n, i) {
+    return n + i;
+}
+
+let arr = [1,2,3];
+
+let newArray = map(arr, plusI);
+
+console.log(newArray);
